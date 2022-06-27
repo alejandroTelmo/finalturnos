@@ -23,21 +23,25 @@ public class PacienteController {
         pacienteService.guardarPaciente(pacienteDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+    @CrossOrigin(origins = "http://localhost:63342")
     @GetMapping("/{id}")
     public PacienteDTO  buscarPaciente(@PathVariable Long id){
 
         return    pacienteService.getPaciente(id);
 
     }
+    @CrossOrigin(origins = "http://localhost:63342")
     @GetMapping
     public List<PacienteDTO> listarPacientes(){
         return pacienteService.listarTodos();
     }
+    @CrossOrigin(origins = "http://localhost:63342")
     @PutMapping
     public ResponseEntity<?> actualizarPaciente(@RequestBody PacienteDTO pacienteDTO){
         pacienteService.actualizarPaciente(pacienteDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+    @CrossOrigin(origins = "http://localhost:63342")
     @DeleteMapping("/{id}")
     public ResponseEntity<?>eliminar(@PathVariable Long id){
         pacienteService.eliminarPaciente(id);

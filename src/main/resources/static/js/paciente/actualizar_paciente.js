@@ -2,13 +2,20 @@ window.addEventListener('load',function(){
 
 const formularioModificar=document.querySelector('#modificar');
 formularioModificar.addEventListener('submit',function(e){
+
  const formData={
-    id:document.querySelector('#idOdontologo').value,
-    nombre:document.querySelector('#nombreOdontologo').value,
-    apellido:document.querySelector('#apellidoOdontologo').value,
-    numeroMatricula:document.querySelector('#numeroMatriculaOdontologo').value
+    id:document.querySelector('#idPaciente').value,
+    nombre:document.querySelector('#nombrePaciente').value,
+    apellido:document.querySelector('#apellidoPaciente').value,
+    dni:document.querySelector('#dniPaciente').value,
+    domicilio:{
+        calle:document.querySelector('#callePaciente').value,
+        numero:document.querySelector('#numeroPaciente').value,
+        ciudad:document.querySelector('#ciudadPaciente').value,
+        provincia:document.querySelector('#provinciaPaciente').value
+    }
  }
-    const url='http://localhost:8080/odontologos';
+    const url='http://localhost:8080/pacientes';
 
     const settings={
     method:'PUT',
@@ -38,10 +45,14 @@ function findById(id){
             .then(data=>{
             console.log(data)
                 let paciente=data;
-                document.querySelector('#idOdontologo').value=paciente.id;
-                document.querySelector('#nombreOdontologo').value=paciente.nombre;
-                document.querySelector('#apellidoOdontologo').value=paciente.apellido;
-                document.querySelector('#numeroMatriculaOdontologo').value=paciente.numeroMatricula;
+                document.querySelector('#idPaciente').value=paciente.id;
+                document.querySelector('#nombrePaciente').value=paciente.nombre;
+                document.querySelector('#apellidoPaciente').value=paciente.apellido;
+                document.querySelector('#dniPaciente').value=paciente.dni;
+                document.querySelector('#callePaciente').value=paciente.domicilio.calle;
+                document.querySelector('#numeroPaciente').value=paciente.domicilio.numero;
+                document.querySelector('#ciudadPaciente').value=paciente.domicilio.ciudad;
+                document.querySelector('#provinciaPaciente').value=paciente.domicilio.provincia;
                 document.querySelector('#formularioOculto').style.display='block';
 
             })

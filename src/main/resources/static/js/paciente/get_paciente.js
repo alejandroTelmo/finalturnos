@@ -16,9 +16,9 @@ window.addEventListener('load', function () {
          for(paciente of data){
 
           let table = document.querySelector("#pacientes");
-          let dentistRow =table.insertRow();
+          let pacienteRow =table.insertRow();
           let tr_id = 'tr_' + paciente.id;
-          dentistRow.id = tr_id;
+          pacienteRow.id = tr_id;
 
            let deleteButton = '<button' +
                                       ' id=' + '\"' + 'btn_delete_' + paciente.id + '\"' +
@@ -37,14 +37,14 @@ window.addEventListener('load', function () {
           //como primer columna pondremos el boton modificar
           //luego los datos del pacientes
           //como ultima columna el boton eliminar
-         dentistRow.innerHTML = '<td>' + updateButton + '</td>' +
+         pacienteRow.innerHTML = '<td>' + updateButton + '</td>' +
                               '<td class=\"td_name\">' + paciente.nombre.toUpperCase() + '</td>' +
                               '<td class=\"td_surname\">' + paciente.apellido.toUpperCase() + '</td>' +
                               '<td class=\"td_surname\">' + paciente.dni+ '</td>' +
-                              '<td class=\"td_surname\">' + paciente.dni+ '</td>' +
-                              '<td class=\"td_surname\">' + paciente.dni+ '</td>' +
-                              '<td class=\"td_surname\">' + paciente.dni+ '</td>' +
-                              '<td class=\"td_surname\">' + paciente.dni+ '</td>' +
+                              '<td class=\"td_surname\">' + paciente.domicilio.calle.toUpperCase()+ '</td>' +
+                              '<td class=\"td_surname\">' + paciente.domicilio.numero+ '</td>' +
+                              '<td class=\"td_surname\">' + paciente.domicilio.ciudad.toUpperCase()+ '</td>' +
+                              '<td class=\"td_surname\">' + paciente.domicilio.provincia.toUpperCase()+ '</td>' +
                               '<td>' + deleteButton + '</td>';
 
         };
