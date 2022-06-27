@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Turnos Centro Odontológico</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<div class="container-fluid " id="background">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                <button class="navbar-toggler my-5" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="navbar-toggler-icon"></span>
+                </button> <a class="navbar-brand" href="#"> <h1>Centro Odontológico</h1> </a>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1 my-5">
+                    <ul class="navbar-nav mx-5">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="odontologos.html"><strong>Odontologos </strong> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pacientes.html" hidden><strong>Pacientes </strong></a>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-5 mx-5">
+                        <input class="form-control mr-sm-2" type="text">
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                            Buscar
+                        </button>
+                    </form>
+                    <ul class="navbar-nav mx-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pacientes.html" ><strong>Login </strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <section>
+<a href="form_alta_odontologo.html">Alta de odontologo </a>
+                <table class="table table-striped mt-2" id="odontologos">
+                    <thead>
+                    <tr>
+                        <th scope="col">Identificador</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Número de matricula</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <div class="container" style="display:none" id="formularioOculto">
+                    <div class="abs-center">
+
+                        <form action="#" class="border p-3 form" id="modificar" >
+                                <h4 class="text-center">Modificar</h4>
+                            <div class="form-group">
+                                <label for="idOdontologo">Id</label>
+                                <input type="number" name="id" id="idOdontologo" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreOdontologo">Nombre</label>
+                                <input type="text" name="nombre" id="nombreOdontologo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="apellidoOdontologo">Apellido</label>
+                                <input type="text" name="apellido" id="apellidoOdontologo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="numeroMatriculaOdontologo">Número de Matrícula</label>
+                                <input type="text" name="numeroMatricula" id="numeroMatriculaOdontologo" class="form-control">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary text-center">Modificar</button>
+                            </div>
+
+                        </form>
+                        <div id="response">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+            <script src="../js/jquery.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/scripts.js"></script>
+             <script type="text/javascript"  src="../js/odontologo/get_odontologos.js"></script>
+        <script type="text/javascript"  src="../js/odontologo/actualizar_odontologo.js"></script>
+        <script type="text/javascript"  src="../js/odontologo/borrar_odontologo.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </div>
+</div>
+</body>
+</html>
