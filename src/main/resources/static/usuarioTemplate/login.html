@@ -29,10 +29,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="../odontologoTemplate/odontologos.html"> <strong>Odontologos</strong> <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="../odontologoTemplate/odontologos.html"><strong>Odontologos</strong>  <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="paciente_lista.html" hidden> <strong>Pacientes</strong></a>
+                            <a class="nav-link" href="../pacienteTemplate/paciente_lista.html" hidden> <strong>Pacientes</strong> </a>
                         </li>
 
                     </ul>
@@ -55,53 +55,25 @@
     <div class="container">
         <div class="abs-center">
             <form action="#" class="border p-3 form" id="formularioAlta">
-                <div class="text-center"><h3>Alta de paciente</h3> </div>
+                <div class="text-center"><h3>Login</h3> </div>
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="form-control">
+                    <label for="nombre">Nombre de usuario :</label>
+                    <input type="text" name="username" id="nombre" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="dni">Número de documento de identidad :</label>
-                    <input type="text" name="dni" id="dni" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="nombreDeLaCalle">Nombre de la calle :</label>
-                    <input type="text" name="calle" id="nombreDeLaCalle" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="numero">Numeración de la calle :</label>
-                    <input type="number" name="numero" id="numero" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="ciudad">Ciudad :</label>
-                    <input type="text" name="ciudad" id="ciudad" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="provincia">Provincia :</label>
-                    <input type="text" name="provincia" id="provincia" class="form-control">
+                    <label for="password">Password :</label>
+                    <input type="password" name="password" id="password" class="form-control">
                 </div>
 
+                <div class="text-center"><button type="submit" class="btn btn-primary">Ingresar</button></div>
 
-                <button type="submit" class="btn btn-primary">Guardar</button>
+
             </form>
+            <div id="response">
 
-
+            </div>
         </div>
     </div>
-    <div id="response" style="display:none">
-
-    </div>
-
-
-
-
-
-
-
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

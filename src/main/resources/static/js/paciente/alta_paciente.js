@@ -36,9 +36,11 @@ formularioAltaPaciente.addEventListener('submit',function(e){
         console.log(data)
         let successAlert='<div class="alert alert-success alert-dismissible">'+
         '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-        '<strong>Paciente guardado</strong> </div>'
-        document.querySelector('#response').innerHtml=errorAlert;
-         document.querySelector('#response').style.display="block";
+        '<strong>Paciente guardado</strong> </div>';
+
+            document.querySelector('div#response').innerHtml+= successAlert ;
+            document.querySelector('div#response').style.display="block";
+            alert("Paciente guardado con exito")
          resetUploadForm();
         }
 
@@ -47,8 +49,8 @@ formularioAltaPaciente.addEventListener('submit',function(e){
              let errorAlert='<div class="alert alert-danger alert-dismissible">'+
                     '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
                     '<strong>Error intente nuevamente</strong> </div>'
-                    document.querySelector('#response').innerHtml=errorAlert;
-                     document.querySelector('#response').style.display="block";
+                    document.querySelector('div#response').innerHtml=errorAlert;
+                     document.querySelector('div#response').style.display="block";
                      resetUploadForm();
         })
 

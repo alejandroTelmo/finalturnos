@@ -1,18 +1,22 @@
 package com.turnero.turnos.entity;
 
+
+
 import javax.persistence.*;
 
+import java.io.Serializable;
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
 @Table(name = "turnos")
-public class Turno  {
+public class Turno implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private LocalTime hora =LocalTime.now();
-    private LocalTime horaturno;
+    private Time horaturno;
     @ManyToOne
     @JoinColumn(name = "paciente_id",nullable = false)
     private Paciente paciente;
@@ -22,7 +26,7 @@ public class Turno  {
 
     private LocalDate fecha=LocalDate.now();
 
-    public Turno(Long id, LocalTime hora, LocalTime horaturno, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
+    public Turno(Long id, LocalTime hora, Time horaturno, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
         this.id = id;
         this.hora = hora;
         this.horaturno = horaturno;
@@ -75,11 +79,11 @@ public class Turno  {
         this.fecha = fecha;
     }
 
-    public LocalTime getHoraturno() {
+    public Time getHoraturno() {
         return horaturno;
     }
 
-    public void setHoraturno(LocalTime horaturno) {
+    public void setHoraturno(Time horaturno) {
         this.horaturno = horaturno;
     }
 }

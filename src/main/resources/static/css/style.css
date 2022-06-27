@@ -12,3 +12,6 @@ background:#000000;
 .form {
   width: 450px;
 }
+a:hover {
+  color: orange;
+}

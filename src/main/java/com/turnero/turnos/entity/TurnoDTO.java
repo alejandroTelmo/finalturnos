@@ -1,6 +1,7 @@
 package com.turnero.turnos.entity;
 
 
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -10,9 +11,9 @@ public class TurnoDTO {
     private Paciente paciente;
     private Odontologo odontologo;
     private LocalDate fecha=LocalDate.now();
-    private LocalTime horaturno;
+    private Time horaturno;
 
-    public TurnoDTO(Long id, LocalTime hora, Paciente paciente, Odontologo odontologo, LocalDate fecha, LocalTime horaturno) {
+    public TurnoDTO(Long id, LocalTime hora, Paciente paciente, Odontologo odontologo, LocalDate fecha, Time horaturno) {
         this.id = id;
         this.hora = hora;
         this.paciente = paciente;
@@ -64,11 +65,11 @@ public class TurnoDTO {
         this.fecha = fecha;
     }
 
-    public LocalTime getHoraturno() {
+    public Time getHoraturno() {
         return horaturno;
     }
 
-    public void setHoraturno(LocalTime horaturno) {
+    public void setHoraturno(Time horaturno) {
         this.horaturno = horaturno;
     }
 }
