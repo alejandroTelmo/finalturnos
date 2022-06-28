@@ -34,6 +34,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="pacientes.html" hidden>Pacientes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="turno_lista.html" hidden>Turnos</a>
+                        </li>
 
                     </ul>
                     <form class="form-inline">
@@ -53,20 +56,24 @@
     </div>
 
     <div class="container">
-        <div>Nuevo turno</div>
+        <div><a href="turno_lista.html">Todos los turnos</a> </div>
         <div class="abs-center">
             <form action="#" class="border p-3 form" id="formularioAlta">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="form-control">
+                    <label for="idOdontologo">Nombre</label>
+                    <input type="number" name="odontologo" id="idOdontologo" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="diaturno">Día del turno</label>
+                    <input type="date" name="diaturno" id="diaturno" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="horaturno">Hora del turno</label>
                     <input type="time" name="horaturno" id="horaturno" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="numeroMatricula">Número de Matrícula</label>
-                    <input type="text" name="numeroMatricula" id="numeroMatricula" class="form-control">
+                    <label for="idPaciente">paciente</label>
+                    <input type="number" name="paciente" id="idPaciente" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </form>

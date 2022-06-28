@@ -36,7 +36,7 @@ public class PacienteController {
         return pacienteService.listarTodos();
     }
     @CrossOrigin(origins = "http://localhost:63342")
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<?> actualizarPaciente(@RequestBody PacienteDTO pacienteDTO){
         pacienteService.actualizarPaciente(pacienteDTO);
         return ResponseEntity.ok(HttpStatus.OK);
@@ -46,6 +46,13 @@ public class PacienteController {
     public ResponseEntity<?>eliminar(@PathVariable Long id){
         pacienteService.eliminarPaciente(id);
         return ResponseEntity.ok(HttpStatus.OK);
+    }
+    @CrossOrigin(origins = "http://localhost:63342")
+    @GetMapping("/{name}")
+    public PacienteDTO  findPatientByName(@PathVariable  String name){
+
+        return    pacienteService.buscarPorNombre(name);
+
     }
 
 }

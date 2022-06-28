@@ -2,6 +2,8 @@ package com.turnero.turnos.entity;
 
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 
 import java.io.Serializable;
@@ -17,6 +19,8 @@ public class Turno implements Serializable {
     private Long id;
     private LocalTime hora =LocalTime.now();
     private Time horaturno;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    private LocalDate diaturno;
     @ManyToOne
     @JoinColumn(name = "paciente_id",nullable = false)
     private Paciente paciente;
@@ -26,10 +30,11 @@ public class Turno implements Serializable {
 
     private LocalDate fecha=LocalDate.now();
 
-    public Turno(Long id, LocalTime hora, Time horaturno, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
+    public Turno(Long id, LocalTime hora, Time horaturno, LocalDate diaturno, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
         this.id = id;
         this.hora = hora;
         this.horaturno = horaturno;
+        this.diaturno = diaturno;
         this.paciente = paciente;
         this.odontologo = odontologo;
         this.fecha = fecha;
@@ -85,5 +90,13 @@ public class Turno implements Serializable {
 
     public void setHoraturno(Time horaturno) {
         this.horaturno = horaturno;
+    }
+
+    public LocalDate getDiaturno() {
+        return diaturno;
+    }
+
+    public void setDiaturno(LocalDate diaturno) {
+        this.diaturno = diaturno;
     }
 }

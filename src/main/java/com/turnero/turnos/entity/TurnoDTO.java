@@ -12,14 +12,16 @@ public class TurnoDTO {
     private Odontologo odontologo;
     private LocalDate fecha=LocalDate.now();
     private Time horaturno;
+    private LocalDate diaturno;
 
-    public TurnoDTO(Long id, LocalTime hora, Paciente paciente, Odontologo odontologo, LocalDate fecha, Time horaturno) {
+    public TurnoDTO(Long id, LocalTime hora, Paciente paciente, Odontologo odontologo, LocalDate fecha, Time horaturno, LocalDate diaturno) {
         this.id = id;
         this.hora = hora;
         this.paciente = paciente;
         this.odontologo = odontologo;
         this.fecha = fecha;
         this.horaturno = horaturno;
+        this.diaturno = diaturno;
     }
 
     public TurnoDTO(){
@@ -71,5 +73,13 @@ public class TurnoDTO {
 
     public void setHoraturno(Time horaturno) {
         this.horaturno = horaturno;
+    }
+
+    public LocalDate getDiaturno() {
+        return diaturno;
+    }
+
+    public void setDiaturno(LocalDate diaturno) {
+        this.diaturno = diaturno;
     }
 }
