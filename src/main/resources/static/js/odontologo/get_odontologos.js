@@ -22,13 +22,15 @@ window.addEventListener('load', function () {
 
            let deleteButton = '<button' +
                                       ' id=' + '\"' + 'btn_delete_' + odontologo.id + '\"' +
-                                      ' type="button" onclick="deleteById('+odontologo.id+')" class="btn btn-danger btn_delete">' +
-                                      '&times' +
+
+                                      ' type="button" onclick="deleteById('+odontologo.id+')" class="danger">' +
+                                     // '&times' +
+                                      ' <i class="fa-solid fa-trash-can icon-left"></i>'+
                                       '</button>';
 
                     let updateButton = '<button' +
                                       ' id=' + '\"' + 'btn_id_' + odontologo.id + '\"' +
-                                      ' type="button" onclick="findById('+odontologo.id+')" class="btn btn-info btn_id">' +
+                                      ' type="button" onclick="findById('+odontologo.id+')" class="info btn_id">' +
                                       odontologo.id +
                                       '</button>';
 

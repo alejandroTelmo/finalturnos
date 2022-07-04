@@ -1,108 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Turnos</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo1.jpg">
+    <meta name="description" content="Digital House CTD | Proyecto integrador | Backend" />
 
-    <title>Turnos Centro Odontológico</title>
+    <!-- ----------------------------- estilos CSS ----------------------------- -->
+    <link rel="stylesheet" href="css/tasksStyles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ------------------- libreria de iconos Fontawesome -------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+    <!-- logica de la página -->
+    <script src="js/taks.js"></script>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+<!-- cabecera con barra de navegación -->
+<header class="container">
+    <div class="cabecera">
+        <span>Horario de Lunes a Viernes  8:00hs a 20:00hs</span> <span>Contacto Whatsapp:29206412131</span>
+    </div>
+    <div>
+        <nav class="navbar">
+            <a  href="index.html"><h1>Clínica Turnos</h1></a>
+            <ul>
+                <li> <a href="odontologoTemplate/odontologo_lista.html">Odontologos</a>  </li>
+
+                <li>   <a href="pacienteTemplate/paciente_lista.html">Pacientes </a></li>
+
+                <li>  <a href="turnoTemplate/turno_lista.html">Turnos </a> </li>
+            </ul>
+
+            <div class="user-info">
+                <p>username</p>
+                <div class="user-image"></div>
+                <button id="closeApp"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button>
+            </div>
+        </nav>
+    </div>
 
 
-  </head>
-  <body>
+</header>
 
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="#"> <h1>Centro Odontológico</h1> </a>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							 <a class="nav-link" href="odontologoTemplate/odontologos.html">Odontologos <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							 <a class="nav-link" href="pacienteTemplate/pacientes.html" hidden>Pacientes</a>
-						</li>
+<main class="container">
 
-					</ul>
-					<form class="form-inline">
-						<input class="form-control mr-sm-2" type="text"> 
-						<button class="btn btn-primary my-2 my-sm-0" type="submit">
-							Buscar
-						</button>
-					</form>
-					<ul class="navbar-nav ">
-						<li class="nav-item">
-							<a class="nav-link" href="usuario/login.html" >Login</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			<div class="jumbotron">
-				<img width="668" height="391" src="https://www.aoa.org.ar/wp-content/uploads/2016/09/posgrados.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="https://www.aoa.org.ar/wp-content/uploads/2016/09/posgrados.jpg 668w, https://www.aoa.org.ar/wp-content/uploads/2016/09/posgrados-500x293.jpg 500w, https://www.aoa.org.ar/wp-content/uploads/2016/09/posgrados-300x176.jpg 300w, https://www.aoa.org.ar/wp-content/uploads/2016/09/posgrados-249x146.jpg 249w, https://www.aoa.org.ar/wp-content/uploads/2016/09/posgrados-50x29.jpg 50w, https://www.aoa.org.ar/wp-content/uploads/2016/09/posgrados-128x75.jpg 128w" sizes="(max-width: 668px) 100vw, 668px">
-				<img width="436" height="250" src="https://www.aoa.org.ar/wp-content/uploads/2016/09/AOA-home-asesoramientos.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="https://www.aoa.org.ar/wp-content/uploads/2016/09/AOA-home-asesoramientos.jpg 436w, https://www.aoa.org.ar/wp-content/uploads/2016/09/AOA-home-asesoramientos-350x200.jpg 350w, https://www.aoa.org.ar/wp-content/uploads/2016/09/AOA-home-asesoramientos-300x172.jpg 300w, https://www.aoa.org.ar/wp-content/uploads/2016/09/AOA-home-asesoramientos-255x146.jpg 255w, https://www.aoa.org.ar/wp-content/uploads/2016/09/AOA-home-asesoramientos-50x29.jpg 50w, https://www.aoa.org.ar/wp-content/uploads/2016/09/AOA-home-asesoramientos-131x75.jpg 131w" sizes="(max-width: 436px) 100vw, 436px">
 
-				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-	</div>
-</div>
+    <div class="listar_odontologo">
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </div>
 
-  </body>
+</main>
+
+
+
+</body>
+
 </html>

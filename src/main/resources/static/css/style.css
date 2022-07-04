@@ -1,17 +1,180 @@
 # Empty CSS file for your own CSS
-.dark{
-background:#000000;
-}
+
 .abs-center {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
+header.container nav.navbar{
+    background:#28bfa5;
+}
+header.container div.cabecera{
+    background:var(--blanco);
+    color:#28bfa5;
+}
 
 .form {
   width: 450px;
 }
-a:hover {
-  color: orange;
+a{
+  color:var(--blanco);
+  text-decoration:none;
 }
+a:hover {
+  color: var(--azul-hover);
+}
+.logo{
+border-radius:50%;
+}.
+table#odontologos {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+  text:align-center;
+  margin:2rem;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+  }
+
+}
+/* typography */
+
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+thead th, tfoot th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+tabla td {
+  letter-spacing: 1px;
+  margin-left:5rem;
+  align:center;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+thead, tfoot {
+  background: url(leopardskin.jpg);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+thead th, tfoot th, tfoot td {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  border: 3px solid white;
+}
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+tbody tr {
+  background-image: url(noise.png);
+}
+
+table {
+  background-color: gray;
+}
+caption {
+  font-family: 'Rock Salt', cursive;
+  padding: 10px;
+  font-style: italic;
+  caption-side: bottom;
+  color: #666;
+  text-align: right;
+  letter-spacing: 1px;
+}
+table button.danger{
+          background-color: var(--rojo);
+          color: white;
+          padding: .5rem 0;
+          border-radius: .3rem;
+          font-size: 1rem;
+          font-weight: 400;
+          height:2rem;
+          width:2rem;
+          text-align:center;
+
+      }
+      table button.danger icon{
+        align:center;
+      }
+      table td button.danger{
+      margin-left:25px;
+       align:center;
+      }
+ table button.info{
+  background:	#87CEEB;
+  height:2rem;
+  width:2rem;
+
+ }
+ section {
+   margin:2rem;
+ }
+ .navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin:0 20px;
+    position:relative;
+ }
+
+ .navbar ul li a{
+    text-decoration:none;
+    color:white;
+    font-family:Roboto,"sans-serif";
+    font-size:1.2rem;
+ }
+
+.navbar ul li::before{
+  content:"";
+  height:3px;
+  width:0%;
+  background:yellowgreen;
+  position:absolute;
+  left:0;
+  bottom:-12px;
+  transition: 0.2s ease-out;
+
+ }
+.navbar ul li:hover:before{
+    width: 100%;
+ }
+
+
+
+

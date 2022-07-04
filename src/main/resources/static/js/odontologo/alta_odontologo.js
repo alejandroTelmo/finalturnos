@@ -28,9 +28,10 @@ formularioAltaOdontologo.addEventListener('submit',function(e){
         let successAlert='<div class="alert alert-success alert-dismissible">'+
         '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
         '<strong>Odontologo guardado</strong> </div>'
-        document.querySelector('#response').innerHtml=errorAlert;
+        document.querySelector('#response').innerHtml=successAlert;
          document.querySelector('#response').style.display="block";
          resetUploadForm();
+         alert('Odontologo creado con éxito !')
         }
 
         )

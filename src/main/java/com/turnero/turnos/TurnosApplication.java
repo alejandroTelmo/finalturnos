@@ -14,7 +14,7 @@ public class TurnosApplication {
 		PropertyConfigurator.configure("log4j.properties");
 		SpringApplication.run(TurnosApplication.class, args);
 	}
-	public WebMvcConfigurer corsConfigurer() {
+/**	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
@@ -23,6 +23,6 @@ public class TurnosApplication {
 				registry.addMapping("/**").allowedOrigins("http://localhost:63342").allowedMethods("*").allowedHeaders("*");
 			}
 		};
-	}
+	//}*/
 
 }
