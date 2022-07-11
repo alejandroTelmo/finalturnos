@@ -7,8 +7,8 @@ public class DomicilioDTO {
     private String ciudad;
     private String provincia;
 
-    public DomicilioDTO(Long id, String calle, Integer numero, String ciudad, String provincia) {
-        this.id = id;
+    public DomicilioDTO( String calle, Integer numero, String ciudad, String provincia) {
+
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;

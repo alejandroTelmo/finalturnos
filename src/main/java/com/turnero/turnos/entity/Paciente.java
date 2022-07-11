@@ -13,11 +13,12 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+    @Column(name = "nombre")
     private String nombre;
     private String apellido;
 
     @OneToOne(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
-    @JoinColumn(name ="direccion_id" , referencedColumnName= "id")
+    @JoinColumn(name ="direccion_id" , referencedColumnName= "id",nullable = false)
     private Domicilio domicilio;
 
     private String dni;

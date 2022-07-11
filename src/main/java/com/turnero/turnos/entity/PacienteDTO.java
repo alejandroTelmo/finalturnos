@@ -8,11 +8,11 @@ public class PacienteDTO {
     private String nombre;
     private String apellido;
     private String dni;
-    private Domicilio domicilio;
+    private DomicilioDTO domicilio;
 
     private LocalDate fechaDeAlta= LocalDate.now();;
 
-    public PacienteDTO(Long id, String nombre, String apellido, String dni, Domicilio domicilio, LocalDate fechaDeAlta) {
+    public PacienteDTO(Long id, String nombre, String apellido, String dni, DomicilioDTO domicilio, LocalDate fechaDeAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -65,11 +65,11 @@ public class PacienteDTO {
         this.fechaDeAlta = fechaDeAlta;
     }
 
-    public Domicilio getDomicilio() {
+    public DomicilioDTO getDomicilio() {
         return domicilio;
     }
 
-    public void setDomicilio(Domicilio domicilioDTO) {
+    public void setDomicilio(DomicilioDTO domicilioDTO) {
         this.domicilio = domicilioDTO;
     }
 }

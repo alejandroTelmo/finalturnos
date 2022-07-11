@@ -11,48 +11,44 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/pacientes")
+@CrossOrigin(origins = "http://localhost:63342")
 public class PacienteController {
     IPacienteService pacienteService;
+
 
     public PacienteController(IPacienteService pacienteService) {
         this.pacienteService = pacienteService;
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @PostMapping
-    public ResponseEntity<?> guardar(@RequestBody PacienteDTO pacienteDTO){
+    public ResponseEntity<HttpStatus> guardar(@RequestBody PacienteDTO pacienteDTO){
         pacienteService.guardarPaciente(pacienteDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @GetMapping("/{id}")
     public PacienteDTO  buscarPaciente(@PathVariable Long id){
-
-        return    pacienteService.getPaciente(id);
-
+        return    pacienteService.buscarPaciente(id);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @GetMapping
     public List<PacienteDTO> listarPacientes(){
         return pacienteService.listarTodos();
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @PutMapping("/{id}")
-    public ResponseEntity<?> actualizarPaciente(@RequestBody PacienteDTO pacienteDTO){
+    public ResponseEntity<HttpStatus> actualizarPaciente(@RequestBody PacienteDTO pacienteDTO){
         pacienteService.actualizarPaciente(pacienteDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?>eliminar(@PathVariable Long id){
+    public ResponseEntity<HttpStatus>eliminar(@PathVariable Long id){
         pacienteService.eliminarPaciente(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
-    @GetMapping("/{name}")
-    public PacienteDTO  findPatientByName(@PathVariable  String name){
-
-        return    pacienteService.buscarPorNombre(name);
-
+    @GetMapping("/buscar/{nombre}")
+    public Optional<PacienteDTO> buscarPacientePorNombre(@PathVariable("nombre")  String nombre){
+        return    pacienteService.buscarPorNombre(nombre);
     }
 
 }

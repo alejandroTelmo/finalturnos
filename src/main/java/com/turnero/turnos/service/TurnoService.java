@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turnero.turnos.entity.Turno;
 import com.turnero.turnos.entity.TurnoDTO;
 import com.turnero.turnos.repository.ITurnoRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,20 +21,23 @@ public class TurnoService implements ITurnoService{
     }
     @Autowired
     ObjectMapper mapper;
+    private final Logger logger=Logger.getLogger(TurnoService.class);
 
     @Override
     public void guardarTurno(TurnoDTO turnoDTO) {
+        logger.info("Nuevo turno creado con exito.");
         turnoRepository.save(mapper.convertValue(turnoDTO, Turno.class));
     }
 
     @Override
-    public TurnoDTO getTurno(Long id) {
+    public TurnoDTO buscarTurno(Long id) {
         return mapper.convertValue(turnoRepository.findById(id),TurnoDTO.class);
     }
 
     @Override
     public void eliminarTurno(Long id) {
         turnoRepository.deleteById(id);
+        logger.info("Turno eliminado con exito.");
     }
 
     @Override

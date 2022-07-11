@@ -63,3 +63,60 @@ delete from pacientes where id=? [23503-214]]; nested exception is org.hibernate
 [2022-06-28 19:38:44] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/franco': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPacientePorNombre(java.lang.String)}
 [2022-06-28 23:39:37] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/franco': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.findPatientByName(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
 [2022-07-03 16:29:00] [ ERROR] [GlobalExceptionHandler:15] could not execute statement; SQL [n/a]; constraint [FKQTJ6T7MULC2JMFKV92X4CTKWH]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2022-07-05 08:37:43] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/1': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.findPatientByName(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 08:38:39] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/1': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.findPatientByName(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 08:48:44] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/1': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.findPatientByName(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 08:49:09] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/ale': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.findPatientByName(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 09:03:15] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/ale': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPacientePorNombre(java.lang.String)}
+[2022-07-05 09:04:20] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/ale': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPacientePorNombre(java.lang.String)}
+[2022-07-05 09:18:17] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/1': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPacientePorNombre(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 09:19:26] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/1': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPacientePorNombre(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 10:03:20] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/1': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPacientePorNombre(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 10:03:30] [ ERROR] [GlobalExceptionHandler:15] Ambiguous handler methods mapped for '/pacientes/1': {public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPacientePorNombre(java.lang.String), public com.turnero.turnos.entity.PacienteDTO com.turnero.turnos.controller.PacienteController.buscarPaciente(java.lang.Long)}
+[2022-07-05 14:19:12] [ ERROR] [GlobalExceptionHandler:15] query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+[2022-07-05 14:22:32] [ ERROR] [GlobalExceptionHandler:15] Cannot deserialize value of type `com.turnero.turnos.entity.PacienteDTO` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: UNKNOWN; byte offset: #UNKNOWN]
+[2022-07-08 18:44:09] [ ERROR] [GlobalExceptionHandler:15] No class com.turnero.turnos.entity.Domicilio entity with id 2 exists!
+[2022-07-08 18:44:43] [ ERROR] [GlobalExceptionHandler:15] No class com.turnero.turnos.entity.Domicilio entity with id 1 exists!
+[2022-07-08 18:46:09] [ ERROR] [GlobalExceptionHandler:15] No class com.turnero.turnos.entity.Domicilio entity with id 1 exists!
+[2022-07-11 09:21:20] [ ERROR] [GlobalExceptionHandler:15] Request method 'PUT' not supported
+[2022-07-11 09:27:49] [ ERROR] [GlobalExceptionHandler:15] Request method 'PUT' not supported
+[2022-07-11 09:39:05] [ ERROR] [GlobalExceptionHandler:15] not-null property references a null or transient value : com.turnero.turnos.entity.Paciente.domicilio; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : com.turnero.turnos.entity.Paciente.domicilio
+[2022-07-11 09:40:32] [ ERROR] [GlobalExceptionHandler:15] JSON parse error: Unexpected character ('d' (code 100)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('d' (code 100)): was expecting double-quote to start field name
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 2]
+[2022-07-11 09:42:59] [ ERROR] [GlobalExceptionHandler:15] could not execute statement; SQL [n/a]; constraint ["FKPP93VJ20LM7EQCYS9BCKQ8G25: PUBLIC.PACIENTES FOREIGN KEY(DIRECCION_ID) REFERENCES PUBLIC.DOMICILIOS(ID) (CAST(1 AS BIGINT))"; SQL statement:
+delete from domicilios where id=? [23503-214]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2022-07-11 10:18:00] [ ERROR] [GlobalExceptionHandler:15] Domicilio con id 1 inexistente
+[2022-07-11 10:24:19] [ ERROR] [GlobalExceptionHandler:15] No se encontro el domicilio con id 1.
+[2022-07-11 10:24:41] [ ERROR] [GlobalExceptionHandler:15] No se encontro el domicilio con id 5.
+[2022-07-11 10:30:17] [ ERROR] [GlobalExceptionHandler:15] No se encontro el domicilio con id 5.
+[2022-07-11 10:30:35] [ ERROR] [GlobalExceptionHandler:15] Request method 'PUT' not supported
+[2022-07-11 10:30:43] [ ERROR] [GlobalExceptionHandler:15] No se encontro el domicilio con el id o no se envio el id.
+[2022-07-11 11:01:04] [ ERROR] [GlobalExceptionHandler:15] No se encontro el domicilio con id 2.
+[2022-07-11 11:07:59] [ ERROR] [GlobalExceptionHandler:15] El id pasado por parametro No coincide con el id dentro de la petición.
+[2022-07-11 11:08:12] [ ERROR] [GlobalExceptionHandler:15] El id pasado por parametro No coincide con el id dentro de la petición.
+[2022-07-11 16:26:36] [ INFO ] [DomicilioController:31] Se guardo el domicilio correctamente
+[2022-07-11 16:27:33] [ ERROR] [GlobalExceptionHandler:15] No se encontro el domicilio con id 2.
+[2022-07-11 16:27:39] [ INFO ] [DomicilioController:39] Se encontro el domicilio con id : 1 .
+[2022-07-11 16:38:40] [ INFO ] [DomicilioController:31] Se guardo el domicilio correctamente
+[2022-07-11 16:38:56] [ ERROR] [GlobalExceptionHandler:15] El id pasado por parametro No coincide con el id dentro de la petición.
+[2022-07-11 16:49:24] [ INFO ] [DomicilioController:31] Se creo el domicilio correctamente
+[2022-07-11 16:49:31] [ INFO ] [DomicilioController:31] Se creo el domicilio correctamente
+[2022-07-11 16:49:39] [ INFO ] [DomicilioController:31] Se creo el domicilio correctamente
+[2022-07-11 16:49:59] [ INFO ] [DomicilioController:39] Se encontro el domicilio con id : 1 .
+[2022-07-11 16:50:04] [ INFO ] [DomicilioController:39] Se encontro el domicilio con id : 3 .
+[2022-07-11 16:50:14] [ ERROR] [GlobalExceptionHandler:15] El id pasado por parametro No coincide con el id dentro de la petición.
+[2022-07-11 16:50:27] [ INFO ] [DomicilioController:60] Domicilio con id 3fue exitosamente actualizado.
+[2022-07-11 17:39:09] [ ERROR] [GlobalExceptionHandler:15] El id pasado por parametro No coincide con el id dentro de la petición.
+[2022-07-11 17:41:54] [ ERROR] [GlobalExceptionHandler:15] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "3+1"
+[2022-07-11 17:42:13] [ ERROR] [GlobalExceptionHandler:15] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "(3+1)"
+[2022-07-11 17:43:17] [ ERROR] [GlobalExceptionHandler:15] JSON parse error: Unexpected character ('+' (code 43)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('+' (code 43)): was expecting comma to separate Object entries
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 16]
+[2022-07-11 17:43:27] [ ERROR] [GlobalExceptionHandler:15] JSON parse error: Unexpected character ('1' (code 49)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('1' (code 49)): was expecting double-quote to start field name
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 18]
+[2022-07-11 17:43:58] [ INFO ] [DomicilioController:60] Domicilio con id 3fue exitosamente actualizado.
+[2022-07-11 18:03:01] [ ERROR] [GlobalExceptionHandler:15] No class com.turnero.turnos.entity.Paciente entity with id 2 exists!
+[2022-07-11 18:05:22] [ ERROR] [GlobalExceptionHandler:15] No class com.turnero.turnos.entity.Paciente entity with id 2 exists!
+[2022-07-11 18:05:30] [ ERROR] [GlobalExceptionHandler:15] No class com.turnero.turnos.entity.Paciente entity with id 0 exists!
+[2022-07-11 18:05:34] [ ERROR] [GlobalExceptionHandler:15] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "0+1"
+[2022-07-11 18:08:01] [ ERROR] [GlobalExceptionHandler:15] could not execute statement; SQL [n/a]; constraint [FK4OKCQR9IQT2IW6XHY1PPSMO3L]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement

@@ -15,6 +15,7 @@ public class Usuario {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.rol="User";
     }
     public Usuario(){
 

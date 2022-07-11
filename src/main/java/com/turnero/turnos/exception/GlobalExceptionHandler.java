@@ -1,4 +1,4 @@
-package com.turnero.turnos;
+package com.turnero.turnos.exception;
 
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
@@ -13,6 +13,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
 public ResponseEntity<?> todosLosErrores(Exception ex, WebRequest req){
         logger.error((ex.getMessage()));
-        return new ResponseEntity("Error :"+ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity("Error -"+ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 }
 }

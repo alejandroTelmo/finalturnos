@@ -10,6 +10,7 @@ public class UsuarioDTO {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.rol="User";
     }
     public UsuarioDTO(){
 

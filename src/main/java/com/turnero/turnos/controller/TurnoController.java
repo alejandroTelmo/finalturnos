@@ -10,39 +10,40 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/turnos")
+@CrossOrigin(origins = "http://localhost:63342")
 public class TurnoController {
     private final ITurnoService turnoService;
 
     public TurnoController(ITurnoService turnoService) {
         this.turnoService = turnoService;
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @PostMapping
-    public ResponseEntity<?>guardar(@RequestBody TurnoDTO turnoDTO){
+    public ResponseEntity<HttpStatus>guardar(@RequestBody TurnoDTO turnoDTO){
         turnoService.guardarTurno(turnoDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @PutMapping
-    public ResponseEntity<?>actualizar(@RequestBody TurnoDTO turnoDTO){
+    public ResponseEntity<HttpStatus>actualizar(@RequestBody TurnoDTO turnoDTO){
         if(turnoDTO.getId()!=null){
             turnoService.guardarTurno(turnoDTO);
         }
         return ResponseEntity.ok(HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id){
+    public ResponseEntity<HttpStatus> eliminar(@PathVariable Long id){
         turnoService.eliminarTurno(id);
 
         return ResponseEntity.ok(HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @GetMapping("/{id}")
     public TurnoDTO buscar(@PathVariable Long id){
-       return turnoService.getTurno(id);
+       return turnoService.buscarTurno(id);
     }
-    @CrossOrigin(origins = "http://localhost:63342")
+
     @GetMapping
     public List<TurnoDTO> buscarTodos(){
         return turnoService.listarTodos();

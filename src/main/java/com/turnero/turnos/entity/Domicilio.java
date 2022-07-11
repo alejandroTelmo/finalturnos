@@ -14,8 +14,8 @@ public class Domicilio {
     private String ciudad;
     private String provincia;
 
-    public Domicilio(Long id, String calle, Integer numero, String ciudad, String provincia) {
-        this.id = id;
+    public Domicilio(String calle, Integer numero, String ciudad, String provincia) {
+
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;

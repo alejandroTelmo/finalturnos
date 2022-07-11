@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService implements IUsuarioService{
@@ -52,5 +53,12 @@ public class UsuarioService implements IUsuarioService{
             usuarioDTOS.add(mapper.convertValue(u,UsuarioDTO.class));
         }
         return usuarioDTOS;
+    }
+
+    @Override
+    public Optional<UsuarioDTO> buscarUsuarioPorNombreUsuario(String nombre) {
+       UsuarioDTO usuarioDTO=mapper.convertValue(usuarioRepository.buscarPorNombreUsuario(nombre),UsuarioDTO.class);
+       Optional<UsuarioDTO> optionalUsuarioDTO=Optional.ofNullable(usuarioDTO);
+        return optionalUsuarioDTO;
     }
 }
