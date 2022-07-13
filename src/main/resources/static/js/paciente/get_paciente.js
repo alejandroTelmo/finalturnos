@@ -22,13 +22,14 @@ window.addEventListener('load', function () {
 
            let deleteButton = '<button' +
                                       ' id=' + '\"' + 'btn_delete_' + paciente.id + '\"' +
-                                      ' type="button" onclick="deleteById('+paciente.id+')" class="btn btn-danger btn_delete">' +
-                                      '&times' +
+                                      ' type="button" onclick="deleteById('+paciente.id+')" class="danger btn_delete">' +
+
+                                      ' <i class="fa-solid fa-trash-can icon-left"></i>'+
                                       '</button>';
 
                     let updateButton = '<button' +
                                       ' id=' + '\"' + 'btn_id_' + paciente.id + '\"' +
-                                      ' type="button" onclick="findById('+paciente.id+')" class="btn btn-info btn_id">' +
+                                      ' type="button" onclick="findById('+paciente.id+')" class="info btn_id">' +
                                       paciente.id +
                                       '</button>';
 

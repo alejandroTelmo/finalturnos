@@ -1,6 +1,7 @@
 package com.turnero.turnos.service;
 
 import com.turnero.turnos.entity.UsuarioDTO;
+import com.turnero.turnos.exception.ResourceNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +28,7 @@ class IUsuarioServiceTest {
     }
 
     @Test
-    void getUsuario() {
+    void getUsuario() throws ResourceNotFoundException {
         UsuarioDTO usuarioDTO=new UsuarioDTO();
         usuarioDTO.setUsername("chacker");
         usuarioDTO.setPassword("123aa");
@@ -38,7 +39,7 @@ class IUsuarioServiceTest {
     }
 
     @Test
-    void eliminarUsuario() {
+    void eliminarUsuario() throws ResourceNotFoundException {
         UsuarioDTO usuarioDTO=new UsuarioDTO();
         usuarioDTO.setUsername("jacko");
         usuarioDTO.setPassword("123");
@@ -46,12 +47,13 @@ class IUsuarioServiceTest {
         Optional<UsuarioDTO> optionalUsuarioDTO= usuarioService.buscarUsuarioPorNombreUsuario("jacko");
         usuarioService.eliminarUsuario(optionalUsuarioDTO.get().getId());
 
-        assertEquals(null,usuarioService.getUsuario(optionalUsuarioDTO.get().getId()));
+
+        assertThrows(ResourceNotFoundException.class,()->usuarioService.buscarUsuario(optionalUsuarioDTO.get().getId()));
 
     }
 
     @Test
-    void actualizarUsuario() {
+    void actualizarUsuario() throws ResourceNotFoundException {
         UsuarioDTO usuarioDTO=new UsuarioDTO();
         usuarioDTO.setUsername("actualizar");
         usuarioDTO.setPassword("123");

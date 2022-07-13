@@ -63,17 +63,16 @@ formularioAltaPaciente.addEventListener('submit',function(e){
         document.querySelector('#numero').value="";
         document.querySelector('#ciudad').value="";
         document.querySelector('#provincia').value="";
-
+            lista();
 
     }
-    (function(){
-    let pathname = window.location.pathname;
-    if(pathname==="/"){
-    document.querySelector(".nav .nav-item a:first").addClass("active");
-    }else if(pathname==="/lista_pacientes.html"){
-        document.querySelector(".nav .nav-item a:first").addClass("active");
-    }
-    } )();
+    (function lista(){
+        const crear=document.querySelector("#altaPaciente")
+        crear.addEventListener('click',()=>{
+            window.location.assign("paciente_lista.html")
+        })
+
+     } )();
 
 
 });

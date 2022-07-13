@@ -13,7 +13,8 @@ formularioModificar.addEventListener('submit',function(e){
     paciente:{"id":turno.paciente.id     },
     odontologo:{"id":turno.odontologo.id},
  }
-    const url='http://localhost:8080/turnos';
+    const id=document.querySelector('#idTurno').value;
+    const url='http://localhost:8080/turnos'+"/"+id;
 
     const settings={
     method:'PUT',
@@ -26,6 +27,7 @@ formularioModificar.addEventListener('submit',function(e){
         .then(response=>response.json())
         .then( data=>{
         console.log(data)
+        resetUploadForm();
         })
 })
 
@@ -57,3 +59,15 @@ function findById(id){
                 alert("Error"+error);
                 })
     }
+          function resetUploadForm(){
+                       document.querySelector('#idTurno').value="";
+                               document.querySelector('#nombrePaciente').value="";
+                               document.querySelector('#apellidoPaciente').value="";
+                               document.querySelector('#nombreOdontologo').value="";
+                               document.querySelector('#apellidoOdontologo').value="";
+                               document.querySelector('#horaturno').value="";
+                               document.querySelector('#diaturno').value="";
+
+                               document.querySelector('#formularioOculto').style.display='none';
+                                     location. reload();
+                }

@@ -18,12 +18,13 @@ window.addEventListener('load',function(){
 
       let deleteButton = '<button' +
      ' id=' + '\"' + 'btn_delete_' + usuario.id + '\"' +
-      ' type="button" onclick="deleteById('+usuario.id+')" class="btn btn-danger btn_delete">' +
-                                                           '&times' +'</button>';
+      ' type="button" onclick="deleteById('+usuario.id+')" class="danger">' +
+                                                           ' <i class="fa-solid fa-trash-can icon-left"></i>'+
+                                                            '</button>';
 
         let updateButton = '<button' +
           ' id=' + '\"' + 'btn_id_' + usuario.id + '\"' +
-          ' type="button" onclick="findById('+usuario.id+')" class="btn btn-info btn_id">' +
+          ' type="button" onclick="findById('+usuario.id+')" class="info">' +
             usuario.id +
              '</button>';
 

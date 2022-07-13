@@ -1,6 +1,7 @@
 package com.turnero.turnos.controller;
 
 import com.turnero.turnos.entity.TurnoDTO;
+import com.turnero.turnos.exception.ResourceNotFoundException;
 import com.turnero.turnos.service.ITurnoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +22,10 @@ public class TurnoController {
     @PostMapping
     public ResponseEntity<HttpStatus>guardar(@RequestBody TurnoDTO turnoDTO){
         turnoService.guardarTurno(turnoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<HttpStatus>actualizar(@RequestBody TurnoDTO turnoDTO){
         if(turnoDTO.getId()!=null){
             turnoService.guardarTurno(turnoDTO);
@@ -33,14 +34,14 @@ public class TurnoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus> eliminar(@PathVariable Long id){
+    public ResponseEntity<HttpStatus> eliminar(@PathVariable Long id) throws ResourceNotFoundException {
         turnoService.eliminarTurno(id);
 
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public TurnoDTO buscar(@PathVariable Long id){
+    public TurnoDTO buscar(@PathVariable Long id) throws ResourceNotFoundException {
        return turnoService.buscarTurno(id);
     }
 

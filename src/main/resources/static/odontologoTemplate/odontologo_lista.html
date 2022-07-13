@@ -10,11 +10,10 @@
     <meta name="description" content="Digital House CTD | Proyecto integrador | Backend" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">    <!-- ----------------------------- estilos CSS ----------------------------- -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/loginSignupStyles.css">
-    <!-- <link rel="stylesheet" href="../css/tasksStyles.css">-->
+
     <link rel="stylesheet" href="../css/style.css">
-    <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
 
          <!-- ------------------- libreria de iconos Fontawesome -------------------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -22,7 +21,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- logica de la página -->
-    <script src="../js/taks.js"></script>
+
     <script src="https://kit.fontawesome.com/4595c2f876.js" crossorigin="anonymous"></script>
 </head>
 
@@ -45,7 +44,11 @@
 
 
     <div class="listar_odontologo">
-        <a href="../index.html">Ir a principal</a><br>
+        <a href="../index.html">Ir a principal</a>
+        <br>
+        <br>
+        <hr>
+        <br>
         <a href="form_alta_odontologo.html">Alta de odontologo </a>
     </div>
     <section>
@@ -67,37 +70,43 @@
         <div class="container" style="display:none" id="formularioOculto">
             <div class="abs-center">
 
-                <form action="#" class="border p-3 form" id="modificar" >
-                    <h4 class="text-center">Modificar</h4>
-                    <div class="form-group">
+                <form action="#" class="border p-3 form " id="modificarOdontologo" >
+
+                    <div class="form-header">
+                        <h4 >Modificar</h4>
+                        <p>Sonrisa Feliz</p>
+                    </div>
                         <label for="idOdontologo">Id</label>
                         <input type="number" name="id" id="idOdontologo" class="form-control" readonly>
-                    </div>
-                    <div class="form-group">
+
+
                         <label for="nombreOdontologo">Nombre</label>
                         <input type="text" name="nombre" id="nombreOdontologo" class="form-control">
-                    </div>
-                    <div class="form-group">
+
+
                         <label for="apellidoOdontologo">Apellido</label>
                         <input type="text" name="apellido" id="apellidoOdontologo" class="form-control">
-                    </div>
-                    <div class="form-group">
+
+
                         <label for="numeroMatriculaOdontologo">Número de Matrícula</label>
                         <input type="text" name="numeroMatricula" id="numeroMatriculaOdontologo" class="form-control">
-                    </div>
-                    <div class="text-center">
+
+
                         <button type="submit" class="btn btn-primary text-center">Modificar</button>
-                    </div>
+
 
                 </form>
-                <div id="response">
-
-                </div>
             </div>
-        </div>
+            </div>
     </section>
 </main>
 
+<footer class="footer">
+    <div>
+        <h4 class="titulo-footer">Muelita-|-Sonrisa Feliz</h4>
+
+    </div>
+</footer>
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

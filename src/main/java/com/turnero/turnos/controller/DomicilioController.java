@@ -23,7 +23,7 @@ public class DomicilioController {
     @PostMapping
     public ResponseEntity<HttpStatus> crearDomicilio(@RequestBody DomicilioDTO domicilioDTO){
         domicilioService.guardarDomicilio(domicilioDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(HttpStatus.CREATED);
     }
     @GetMapping("/{id}")
     public Optional<DomicilioDTO> buscarDomicilio(@PathVariable Long id) throws ResourceNotFoundException{

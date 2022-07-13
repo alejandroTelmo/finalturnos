@@ -31,7 +31,7 @@ formularioAltaOdontologo.addEventListener('submit',function(e){
         document.querySelector('#response').innerHtml=successAlert;
          document.querySelector('#response').style.display="block";
          resetUploadForm();
-         alert('Odontologo creado con éxito !')
+         lista();
         }
 
         )
@@ -50,14 +50,13 @@ formularioAltaOdontologo.addEventListener('submit',function(e){
         document.querySelector('#apellido').value="";
         document.querySelector('#numeroMatricula').value="";
     }
-    (function(){
-    let pathname = window.location.pathname;
-    if(pathname==="/"){
-    document.querySelector(".nav .nav-item a:first").addClass("active");
-    }else if(pathname==="/odontologos.html"){
-        document.querySelector(".nav .nav-item a:first").addClass("active");
-    }
-    } )();
+    (function lista(){
+        const crear=document.querySelector("#crearOdontologo")
+        crear.addEventListener('click',()=>{
+            window.location.assign("odontologo_lista.html")
+        })
+
+     } )();
 
 
 });

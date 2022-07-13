@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 import java.util.Set;
 
+@CrossOrigin(origins = "http://localhost:63342")
 @RequestMapping("/odontologos")
 @RestController
-@CrossOrigin(origins = "http://localhost:63342")
+
+
 public class OdontologoController {
     @Autowired
     private IOdontologoService odontologoService;
@@ -24,7 +26,7 @@ public class OdontologoController {
     @PostMapping
     public ResponseEntity<HttpStatus> crearOdontologo(@RequestBody OdontologoDTO odontologoDTO) {
         odontologoService.guardarOdontologo(odontologoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
 
@@ -42,7 +44,7 @@ public class OdontologoController {
         return odontologoService.listarTodos();
     }
 
-
+    @CrossOrigin(origins = "http://localhost:63342")
     @ResponseBody
     @PutMapping("/{id}")
     public ResponseEntity<HttpStatus> actualizarOdontologo(@RequestBody OdontologoDTO odontologoDTO,@PathVariable Long id) throws ResourceNotFoundException {

@@ -2,12 +2,9 @@ package com.turnero.turnos.service;
 
 import com.turnero.turnos.entity.OdontologoDTO;
 import com.turnero.turnos.exception.ResourceNotFoundException;
-import com.turnero.turnos.repository.IOdontologoRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -43,6 +40,7 @@ class OdontologoServiceTest {
         odontologoService.guardarOdontologo(odontologoDTO1);
         Optional<OdontologoDTO> optionalOdontologoDTO=odontologoService.buscarOdontologoPorApellido("telmo telmo");
         Optional<OdontologoDTO> odontologoDTO=odontologoService.buscarOdontologo(optionalOdontologoDTO.get().getId());
+
         assertEquals(optionalOdontologoDTO.get().getId(),odontologoDTO.get().getId());
     }
 
@@ -56,6 +54,7 @@ class OdontologoServiceTest {
 
         Optional<OdontologoDTO> optionalOdontologoDTO=odontologoService.buscarOdontologoPorApellido("eliminar");
         odontologoService.eliminarOdontologo(optionalOdontologoDTO.get().getId());
+
         assertThrows(ResourceNotFoundException.class,()->odontologoService.buscarOdontologoPorApellido("eliminar"));;
 
     }
@@ -96,6 +95,7 @@ class OdontologoServiceTest {
         odontologoDTO1.setNumeroMatricula(1);
         odontologoService.guardarOdontologo(odontologoDTO1);
         Set<OdontologoDTO>odontologoDTOSet=odontologoService.listarTodos();
+
         assertTrue(odontologoDTOSet.size()>0);
     }
 }

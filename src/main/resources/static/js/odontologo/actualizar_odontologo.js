@@ -1,14 +1,18 @@
 window.addEventListener('load',function(){
 
-const formularioModificar=document.querySelector('#modificar');
+const formularioModificar=document.querySelector('#modificarOdontologo');
 formularioModificar.addEventListener('submit',function(e){
+
+   e.preventDefault();
+
  const formData={
     id:document.querySelector('#idOdontologo').value,
     nombre:document.querySelector('#nombreOdontologo').value,
     apellido:document.querySelector('#apellidoOdontologo').value,
     numeroMatricula:document.querySelector('#numeroMatriculaOdontologo').value
  }
-    const url='http://localhost:8080/odontologos';
+    const id=document.querySelector('#idOdontologo').value;
+    const url='http://localhost:8080/odontologos'+"/"+id;
 
     const settings={
     method:'PUT',
@@ -21,6 +25,7 @@ formularioModificar.addEventListener('submit',function(e){
         .then(response=>response.json())
         .then( data=>{
         console.log(data)
+        resetUploadForm();
         })
 })
 
@@ -49,3 +54,11 @@ function findById(id){
                 alert("Error"+error);
                 })
     }
+        function resetUploadForm(){
+            document.querySelector('#idOdontologo').value="";
+            document.querySelector('#nombreOdontologo').value="";
+            document.querySelector('#apellidoOdontologo').value="";
+            document.querySelector('#numeroMatriculaOdontologo').value="";
+            document.querySelector('#formularioOculto').style.display='none';
+            location. reload();
+        }

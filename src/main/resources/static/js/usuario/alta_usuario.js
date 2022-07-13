@@ -37,4 +37,12 @@ function resetForm(){
                         document.querySelector('#username').value="",
                       document.querySelector('#password').value="",
                       document.querySelector('#repeatPassword').value=""
+                      lista();
                 }
+         (function lista(){
+                          const crear=document.querySelector("#altaUsuario")
+                          crear.addEventListener('click',()=>{
+                              window.location.assign("usuario_lista.html")
+                          })
+
+                       } )();

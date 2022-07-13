@@ -3,6 +3,8 @@ window.addEventListener('load',function(){
 const formularioModificar=document.querySelector('#modificar');
 formularioModificar.addEventListener('submit',function(e){
 
+e.preventDefault();
+
  const formData={
 
     id  :document.querySelector('#idUsuario').value,
@@ -10,7 +12,8 @@ formularioModificar.addEventListener('submit',function(e){
     password : document.querySelector('#password').value
 
  }
-    const url='http://localhost:8080/usuarios';
+    const id=document.querySelector('#idUsuario').value;
+    const url='http://localhost:8080/usuarios'+"/"+id;
 
     const settings={
     method:'PUT',
@@ -23,6 +26,7 @@ formularioModificar.addEventListener('submit',function(e){
         .then(response=>response.json())
         .then( data=>{
         console.log(data)
+        resetUploadForm();
         })
 })
 
@@ -42,7 +46,7 @@ function findById(id){
                 let usuario=data;
                 document.querySelector('#idUsuario').value=usuario.id;
                 document.querySelector('#username').value=usuario.username;
-                password:document.querySelector('#password').value=usuario.password;
+               // password:document.querySelector('#password').value=usuario.password;
                 document.querySelector('#formularioOculto').style.display='block';
 
             })
@@ -50,3 +54,10 @@ function findById(id){
                 alert("Error"+error);
                 })
     }
+        function resetUploadForm(){
+                                   document.querySelector('#idUsuario').value="";
+                                   document.querySelector('#username').value="";
+                                   document.querySelector('#password').value="";
+                                   document.querySelector('#formularioOculto').style.display='none';
+                                     location. reload();
+                    }

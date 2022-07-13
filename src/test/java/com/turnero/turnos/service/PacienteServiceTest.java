@@ -3,6 +3,7 @@ package com.turnero.turnos.service;
 import com.turnero.turnos.entity.DomicilioDTO;
 import com.turnero.turnos.entity.Paciente;
 import com.turnero.turnos.entity.PacienteDTO;
+import com.turnero.turnos.exception.ResourceNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +20,7 @@ class PacienteServiceTest {
 
 
     @Test
-    public void crearPacienteTest(){
+    public void crearPacienteTest() throws ResourceNotFoundException {
         DomicilioDTO domicilioDTO=new DomicilioDTO();
         domicilioDTO.setCalle("crear domicilio");
         domicilioDTO.setNumero(198);
@@ -40,7 +41,7 @@ class PacienteServiceTest {
 
     }
     @Test
-    public void actualizarPaciente(){
+    public void actualizarPaciente() throws ResourceNotFoundException {
         DomicilioDTO domicilioDTO=new DomicilioDTO();
         domicilioDTO.setCalle("crear domicilio");
         domicilioDTO.setNumero(198);
@@ -70,7 +71,7 @@ class PacienteServiceTest {
 
     }
     @Test
-    public void eliminarPaciente(){
+    public void eliminarPaciente() throws ResourceNotFoundException {
         DomicilioDTO domicilioDTO=new DomicilioDTO();
         domicilioDTO.setCalle("crear domicilio");
         domicilioDTO.setNumero(198);
@@ -92,7 +93,7 @@ class PacienteServiceTest {
     }
 
     @Test
-    public void buscarPacientePorId(){
+    public void buscarPacientePorId() throws ResourceNotFoundException {
 
         DomicilioDTO domicilioDTO=new DomicilioDTO();
         domicilioDTO.setCalle("crear domicilio");
@@ -111,7 +112,7 @@ class PacienteServiceTest {
      assertEquals(1L,pacienteDTO1.getId());
     }
     @Test
-    public void buscarPacientePorNombre(){
+    public void buscarPacientePorNombre() throws ResourceNotFoundException {
         DomicilioDTO domicilioDTO=new DomicilioDTO();
         domicilioDTO.setCalle("crear domicilio");
         domicilioDTO.setNumero(198);

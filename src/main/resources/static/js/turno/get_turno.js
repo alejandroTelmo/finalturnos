@@ -18,12 +18,13 @@ window.addEventListener('load',function(){
 
       let deleteButton = '<button' +
      ' id=' + '\"' + 'btn_delete_' + turno.id + '\"' +
-      ' type="button" onclick="deleteById('+turno.id+')" class="btn btn-danger btn_delete">' +
-                                                           '&times' +'</button>';
+      ' type="button" onclick="deleteById('+turno.id+')" class="danger ">' +
+                                                           ' <i class="fa-solid fa-trash-can icon-left"></i>'+
+                                                           '</button>';
 
         let updateButton = '<button' +
           ' id=' + '\"' + 'btn_id_' + turno.id + '\"' +
-          ' type="button" onclick="findById('+turno.id+')" class="btn btn-info btn_id">' +
+          ' type="button" onclick="findById('+turno.id+')" class="info">' +
             turno.id +
              '</button>';
 
@@ -41,7 +42,7 @@ window.addEventListener('load',function(){
 
 
                               '<td class=\"td_name\">' + turno.horaturno + '</td>' +
-                              '<td class=\"td_name\">' + turno.odontologo.nombre.toUpperCase() + '</td>' +
+
                               '<td>' + deleteButton + '</td>';
 
         }

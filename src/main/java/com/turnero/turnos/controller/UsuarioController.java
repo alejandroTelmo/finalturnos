@@ -1,6 +1,7 @@
 package com.turnero.turnos.controller;
 
 import com.turnero.turnos.entity.UsuarioDTO;
+import com.turnero.turnos.exception.ResourceNotFoundException;
 import com.turnero.turnos.service.IUsuarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,18 +22,18 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<HttpStatus> crearUsuario(@RequestBody UsuarioDTO usuarioDTO){
         usuarioService.guardarUsuario(usuarioDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<HttpStatus> actualizarUsuario(@RequestBody UsuarioDTO usuarioDTO){
         usuarioService.guardarUsuario(usuarioDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public UsuarioDTO buscarUsuario(@PathVariable Long id){
-        return usuarioService.getUsuario(id);
+    public UsuarioDTO buscarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
+        return usuarioService.buscarUsuario(id);
     }
 
     @GetMapping
@@ -41,7 +42,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id){
+    public ResponseEntity<?> eliminar(@PathVariable Long id) throws ResourceNotFoundException {
         usuarioService.eliminarUsuario(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }

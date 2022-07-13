@@ -42,6 +42,7 @@ class IDomicilioServiceTest {
         Optional< DomicilioDTO> dom2=domicilioService.buscarPorNombre("LA bombonera");
         System.out.println(dom2.get().getNumero());
         System.out.println(dom2.get().getId());
+
         assertEquals(555,dom2.get().getNumero());
         assertEquals("Las Grutas",dom2.get().getCiudad());
         assertNotEquals(198,dom2.get().getNumero());
@@ -76,8 +77,9 @@ class IDomicilioServiceTest {
         domicilioService.guardarDomicilio(domicilioDTO);
         Optional<DomicilioDTO> optionalDomicilioDTO=domicilioService.buscarPorNombre("ribbber");
         domicilioService.eliminarDomicilio(optionalDomicilioDTO.get().getId());
+
         assertThrows(ResourceNotFoundException.class,()->domicilioService.buscarDomicilio(optionalDomicilioDTO.get().getId()));
-       // assertEquals( null,domicilioService.buscarDomicilio(optionalDomicilioDTO.get().getId()));
+
     }
 
     @Test

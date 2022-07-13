@@ -23,7 +23,6 @@ window.addEventListener('load',function(){
                 .then(response=>response.json())
                 .then(data=>{
                 console.log(data)
-                alert("Turno guardado con exito")
                 resetForm();
                } )
 console.log(document.querySelector('#horaturno').value)
@@ -39,4 +38,12 @@ function resetForm(){
                       document.querySelector('#idPaciente').value="";
                       document.querySelector('#horaturno').value="";
                       document.querySelector('#diaturno').value="";
+                      lista();
                 }
+                    (function lista(){
+                        const crear=document.querySelector("#altaTurno")
+                        crear.addEventListener('click',()=>{
+                            window.location.assign("turno_lista.html")
+                        })
+
+                     } )();

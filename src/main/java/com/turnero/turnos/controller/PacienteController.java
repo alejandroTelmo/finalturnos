@@ -1,6 +1,7 @@
 package com.turnero.turnos.controller;
 
 import com.turnero.turnos.entity.PacienteDTO;
+import com.turnero.turnos.exception.ResourceNotFoundException;
 import com.turnero.turnos.service.IPacienteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,11 +24,11 @@ public class PacienteController {
     @PostMapping
     public ResponseEntity<HttpStatus> guardar(@RequestBody PacienteDTO pacienteDTO){
         pacienteService.guardarPaciente(pacienteDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
-    public PacienteDTO  buscarPaciente(@PathVariable Long id){
+    public PacienteDTO  buscarPaciente(@PathVariable Long id) throws ResourceNotFoundException {
         return    pacienteService.buscarPaciente(id);
     }
 
@@ -37,17 +38,17 @@ public class PacienteController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<HttpStatus> actualizarPaciente(@RequestBody PacienteDTO pacienteDTO){
+    public ResponseEntity<HttpStatus> actualizarPaciente(@RequestBody PacienteDTO pacienteDTO) throws ResourceNotFoundException {
         pacienteService.actualizarPaciente(pacienteDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus>eliminar(@PathVariable Long id){
+    public ResponseEntity<HttpStatus>eliminar(@PathVariable Long id) throws ResourceNotFoundException {
         pacienteService.eliminarPaciente(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }
     @GetMapping("/buscar/{nombre}")
-    public Optional<PacienteDTO> buscarPacientePorNombre(@PathVariable("nombre")  String nombre){
+    public Optional<PacienteDTO> buscarPacientePorNombre(@PathVariable("nombre")  String nombre) throws ResourceNotFoundException {
         return    pacienteService.buscarPorNombre(nombre);
     }
 

@@ -3,6 +3,7 @@ package com.turnero.turnos.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turnero.turnos.entity.Paciente;
 import com.turnero.turnos.entity.PacienteDTO;
+import com.turnero.turnos.exception.ResourceNotFoundException;
 import com.turnero.turnos.repository.IPacienteRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,24 +32,31 @@ public class PacienteService implements IPacienteService{
         logger.info("Nuevo paciente creado con exito.");
     }
     @Override
-    public PacienteDTO buscarPaciente(Long id) {
-
-        return mapper.convertValue(pacienteRepository.findById(id),PacienteDTO.class);
+    public PacienteDTO buscarPaciente(Long id) throws ResourceNotFoundException{
+            if (pacienteRepository.findById(id).isPresent())
+                return mapper.convertValue(pacienteRepository.findById(id),PacienteDTO.class);
+            else
+                throw new ResourceNotFoundException("Paciente con id "+id+" no existe.");
     }
 
     @Override
-    public void eliminarPaciente(Long id) {
-        pacienteRepository.deleteById(id);
-        logger.info("Paciente con id "+id+" eliminado con exito.");
+    public void eliminarPaciente(Long id) throws ResourceNotFoundException {
+        if (pacienteRepository.findById(id).isPresent()){
+            pacienteRepository.deleteById(id);
+            logger.info("Paciente con id "+id+" eliminado con exito.");
+        }else
+            throw new ResourceNotFoundException("No existe un paciente con id "+id+" .");
+
     }
 
     @Override
-    public void actualizarPaciente(PacienteDTO pacienteDTO) {
+    public void actualizarPaciente(PacienteDTO pacienteDTO) throws ResourceNotFoundException {
         //la validacion del if la hago para  cerciorarme que tenga id y que exista el id de pacientedto
             if(pacienteDTO.getId()!=null && pacienteDTO.getId()==pacienteRepository.findById(pacienteDTO.getId()).get().getId()){
                 pacienteRepository.save(mapper.convertValue(pacienteDTO,Paciente.class));
                 logger.info("Paciente con id "+pacienteDTO.getId()+" actualizado con exito.");
-            }
+            }else
+                throw new ResourceNotFoundException("No tiene id o no existe el id.");
     }
 
     @Override
@@ -61,10 +69,13 @@ public class PacienteService implements IPacienteService{
         return pacienteDTOS;
     }
     @Override
-    public Optional<PacienteDTO> buscarPorNombre(String nombre){
+    public Optional<PacienteDTO> buscarPorNombre(String nombre) throws ResourceNotFoundException{
+        if(pacienteRepository.buscarPorNombre(nombre).isPresent()){
+            PacienteDTO paciente= mapper.convertValue(pacienteRepository.buscarPorNombre(nombre),PacienteDTO.class) ;
+            Optional<PacienteDTO> optionalPacienteDTO=Optional.ofNullable(paciente);
+            return optionalPacienteDTO;
+        }else
+            throw new ResourceNotFoundException("Paciente con nombre "+nombre+" no encontrado.");
 
-        PacienteDTO paciente= mapper.convertValue(pacienteRepository.buscarPorNombre(nombre),PacienteDTO.class) ;
-        Optional<PacienteDTO> optionalPacienteDTO=Optional.ofNullable(paciente);
-        return optionalPacienteDTO;
     }
 }

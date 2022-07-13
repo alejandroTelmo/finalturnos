@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
                                       ' id=' + '\"' + 'btn_delete_' + odontologo.id + '\"' +
 
                                       ' type="button" onclick="deleteById('+odontologo.id+')" class="danger">' +
-                                     // '&times' +
+
                                       ' <i class="fa-solid fa-trash-can icon-left"></i>'+
                                       '</button>';
 

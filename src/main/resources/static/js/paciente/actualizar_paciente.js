@@ -2,6 +2,7 @@ window.addEventListener('load',function(){
 
 const formularioModificar=document.querySelector('#modificar');
 formularioModificar.addEventListener('submit',function(e){
+ e.preventDefault();
 
  const formData={
     id:document.querySelector('#idPaciente').value,
@@ -15,7 +16,8 @@ formularioModificar.addEventListener('submit',function(e){
         provincia:document.querySelector('#provinciaPaciente').value
     }
  }
-    const url='http://localhost:8080/pacientes';
+    const id=document.querySelector('#idPaciente').value;
+    const url='http://localhost:8080/pacientes'+"/"+id;
 
     const settings={
     method:'PUT',
@@ -28,6 +30,7 @@ formularioModificar.addEventListener('submit',function(e){
         .then(response=>response.json())
         .then( data=>{
         console.log(data)
+        resetUploadForm();
         })
 })
 
@@ -60,3 +63,15 @@ function findById(id){
                 alert("Error"+error);
                 })
     }
+      function resetUploadForm(){
+                   document.querySelector('#idPaciente').value="";
+                           document.querySelector('#nombrePaciente').value="";
+                           document.querySelector('#apellidoPaciente').value="";
+                           document.querySelector('#dniPaciente').value="";
+                           document.querySelector('#callePaciente').value="";
+                           document.querySelector('#numeroPaciente').value="";
+                           document.querySelector('#ciudadPaciente').value="";
+                           document.querySelector('#provinciaPaciente').value="";
+                           document.querySelector('#formularioOculto').style.display='none';
+                                 location. reload();
+            }
