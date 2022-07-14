@@ -5,27 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App</title>
-    <link rel="icon" type="image/x-icon" href="./assets/DH_Logo_Black.png">
-    <meta name="description" content="Digital House CTD | Proyecto integrador | Backend 1"/>
+    <title>Clínica Turnos</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo1.jpg">
+    <meta name="description" content="Digital House CTD | Proyecto integrador | Backend" />
 
-    <!-- ---------------- estilos compartidos---------------- -->
+    <!-- ----------------------------- estilos CSS ----------------------------- -->
+    <link rel="stylesheet" href="../css/tasksStyles.css">
     <link rel="stylesheet" href="../css/loginSignupStyles.css">
     <link rel="stylesheet" href="../css/style.css">
-
-
-    <script src="../js/loaders.js"></script>
+    <!-- ------------------- libreria de iconos Fontawesome -------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
+
+<!-- cabecera con barra de navegación -->
 <header class="container">
-    <nav>
-        <h1>Clínica Turnos | <span>Sonrisa Feliz</span></h1>
-        <img src="../assets/logo1.jpg" alt="logo Muelita" class="logo">
-    </nav>
+
+    <div>
+        <nav class="navbar">
+            <a  href="index.html"><h1>Clínica Turnos</h1></a>
+            <ul>
+                <li> <a href="../odontologoTemplate/odontologo_lista.html">Odontólogos</a>  </li>
+
+                <li>   <a href="../pacienteTemplate/paciente_lista.html">Pacientes </a></li>
+
+                <li>  <a href="../turnoTemplate/turno_lista.html">Turnos </a> </li>
+            </ul>
+
+            <div class="user-info">
+                <p>username</p>
+                <div class="user-image"></div>
+                <button id="closeApp"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button>
+            </div>
+        </nav>
+    </div>
+
+
 </header>
-    <div class="enlace-lista"> <a href="usuario_lista.html">Lista usuarios</a> </div>
+
+<div class="enlace-lista"> <a href="usuario_lista.html">Lista usuarios</a> </div>
 
     <div class="container">
         <div class="abs-center">

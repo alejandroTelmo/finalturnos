@@ -8,39 +8,54 @@
     <title>Clínica Turnos</title>
     <link rel="icon" type="image/x-icon" href="assets/logo1.jpg">
     <meta name="description" content="Digital House CTD | Proyecto integrador | Backend" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <!-- ----------------------------- estilos CSS ----------------------------- -->
+    <link rel="stylesheet" href="../css/tasksStyles.css">
     <link rel="stylesheet" href="../css/loginSignupStyles.css">
     <link rel="stylesheet" href="../css/style.css">
-
     <!-- ------------------- libreria de iconos Fontawesome -------------------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- logica de la página -->
-
-    <script src="https://kit.fontawesome.com/4595c2f876.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <!-- cabecera con barra de navegación -->
 <header class="container">
-    <nav>
-        <h1>Clínica Turnos</h1>
 
-        <div class="user-info">
-            <p>username</p>
-            <div class="user-image"></div>
-            <button id="closeApp"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button>
-        </div>
-    </nav>
+    <div>
+        <nav class="navbar">
+            <a  href="index.html"><h1>Clínica Turnos</h1></a>
+            <ul>
+                <li> <a href="../odontologoTemplate/odontologo_lista.html">Odontólogos</a>  </li>
+
+                <li>   <a href="../pacienteTemplate/paciente_lista.html">Pacientes </a></li>
+
+                <li>  <a href="../turnoTemplate/turno_lista.html">Turnos </a> </li>
+            </ul>
+
+            <div class="user-info">
+                <p>username</p>
+                <div class="user-image"></div>
+                <button id="closeApp"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button>
+            </div>
+        </nav>
+    </div>
+
+
 </header>
 
+
 <main class="container">
-    <div><h4> <a href="form_alta_turno.html">Nuevo turno</a> </h4></div>
+
+    <div>
+        <h4>
+            <a href="form_alta_turno.html">Nuevo turno</a>
+        </h4>
+    </div>
+    <hr>
     <div class="row d-flex justify-content-center">
         <div class="col-md-12">
 
@@ -107,7 +122,7 @@
 <footer class="footer">
     <hr>
     <div>
-        <h4 class="titulo-footer">Muelita-|-Sonrisa Feliz</h4>
+        <h4 class="titulo-footer">Muelita---|---Sonrisa Feliz</h4>
 
     </div>
     <hr>

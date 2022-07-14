@@ -252,3 +252,68 @@ delete from domicilios where id=? [23503-214]]; nested exception is org.hibernat
 [2022-07-13 18:34:11] [ INFO ] [UsuarioService:31] Usuario con username mariano ahjoar creado con exito.
 [2022-07-13 18:37:57] [ INFO ] [UsuarioService:47] Usuario con id 6 eliminado con exito.
 [2022-07-13 18:38:07] [ INFO ] [UsuarioService:31] Usuario con username mariano modificado creado con exito.
+[2022-07-13 19:19:17] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:20:27] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:25:16] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:26:36] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:26:49] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:36:30] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:46:02] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:50:13] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:51:03] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:55:29] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:58:06] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:58:47] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:58:47] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:59:30] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:59:31] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 19:59:31] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:00:25] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:01:27] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:04:04] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:04:13] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:04:48] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:04:48] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:42:50] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:44:14] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:44:18] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:45:19] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:45:43] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:46:35] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:47:20] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:10] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:16] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:22] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:50:31] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:51:49] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:11] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:12] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:19] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 20:53:30] [ INFO ] [OdontologoService:29] Odontólogo creado con exito.
+[2022-07-13 20:54:56] [ INFO ] [UsuarioService:31] Usuario con username mariano creado con exito.
+[2022-07-13 20:57:14] [ INFO ] [PacienteService:32] Nuevo paciente creado con exito.
+[2022-07-13 20:57:26] [ INFO ] [PacienteService:57] Paciente con id 1 actualizado con exito.
+[2022-07-13 20:58:38] [ INFO ] [TurnoService:29] Nuevo turno creado con exito.
+[2022-07-13 21:00:51] [ INFO ] [TurnoService:29] Nuevo turno creado con exito.
+[2022-07-13 21:01:04] [ INFO ] [TurnoService:29] Nuevo turno creado con exito.
+[2022-07-13 21:05:01] [ INFO ] [OdontologoService:29] Odontólogo creado con exito.
+[2022-07-13 21:05:20] [ INFO ] [PacienteService:32] Nuevo paciente creado con exito.
+[2022-07-13 21:05:36] [ INFO ] [PacienteService:57] Paciente con id 1 actualizado con exito.
+[2022-07-13 21:05:54] [ INFO ] [OdontologoService:60] Odontologo con id 1 fue actualizado con exito.
+[2022-07-13 21:06:18] [ INFO ] [TurnoService:29] Nuevo turno creado con exito.
+[2022-07-13 21:06:29] [ INFO ] [TurnoService:29] Nuevo turno creado con exito.
+[2022-07-13 21:06:48] [ INFO ] [TurnoService:43] Turno eliminado con exito.
+[2022-07-13 21:24:54] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 21:24:56] [ ERROR] [GlobalExceptionHandler:15] La lista de odontólogos esta vacia.
+[2022-07-13 21:25:01] [ INFO ] [OdontologoService:29] Odontólogo creado con exito.
+[2022-07-13 21:25:14] [ INFO ] [PacienteService:32] Nuevo paciente creado con exito.
+[2022-07-13 21:25:37] [ INFO ] [TurnoService:29] Nuevo turno creado con exito.

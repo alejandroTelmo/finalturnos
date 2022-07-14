@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "96ec25d7-ec3c-48a9-9afc-55b4034fd666",
+		"name": "turnero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13626191"
+	},
+	"item": [
+		{
+			"name": "pacientes",
+			"item": [
+				{
+					"name": "crear paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"nombre\":\"alejo\",\r\n    \"apellido\":\"igual\",\r\n    \"dni\":\"25252515\",\r\n\"domicilio\":{\r\n    \"calle\":\"creek\",\r\n    \"numero\":999,\r\n    \"ciudad\":\"LG\",\r\n    \"provincia\":\"RN\"\r\n}\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/pacientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar paciente por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pacientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todos los pacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pacientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar paciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pacientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mala request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar paciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"id\":2,\r\n     \"nombre\":\"alvertina\",\r\n\"apellido\":\"igual\",\r\n\"dni\":\"25252515\",\r\n\"domicilio\":{\r\n    \"id\":2,\r\n    \"calle\":\"cerca del mar\",\r\n    \"numero\":50,\r\n    \"ciudad\":\"BSAS\",\r\n    \"provincia\":\"BSAS\"\r\n}\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/pacientes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar paciente por nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pacientes/buscar/alvertina",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes",
+								"buscar",
+								"alvertina"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"paola\",\r\n    \"password\":\"fff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traer todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "odontologos",
+			"item": [
+				{
+					"name": "crear odontologo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"julian\",\r\n    \"apellido\":\"diaz\",\r\n    \"numeroMatricula\":100\r\n    \r\n    \r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/odontologos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odontologos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerTodosLosOdontologos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/odontologos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odontologos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar odontologo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "turnos",
+			"item": [
+				{
+					"name": "traer todos los turnos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "crear un turno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paciente\":{\"id\":2},\r\n    \"odontologo\":{\"id\":1},\r\n    \"horaturno\":\"21:55:08\",\r\n    \"diaturno\":\"2022-10-19\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/turnos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turnos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "domicilios",
+			"item": [
+				{
+					"name": "crear domicilio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"calle\":\"bahia\",\r\n    \"numero\":980,\r\n    \"ciudad\":\"Las grutas\",\r\n    \"provincia\":\"Rio Negro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/domicilios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarDomicilio por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/domicilios/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"domicilios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos los domicilios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/domicilios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar domicilio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {   \"calle\" : \"el condor\",\r\n    \"numero\":980,\r\n    \"ciudad\":\"Las grutas\",\r\n    \"provincia\":\"Rio Negro\"\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/domicilios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar domicilio por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/domicilios/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"domicilios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

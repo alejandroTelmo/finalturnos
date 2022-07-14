@@ -49,7 +49,8 @@ formularioAltaOdontologo.addEventListener('submit',function(e){
         document.querySelector('#nombre').value="";
         document.querySelector('#apellido').value="";
         document.querySelector('#numeroMatricula').value="";
-    }
+        lista();
+            }
     (function lista(){
         const crear=document.querySelector("#crearOdontologo")
         crear.addEventListener('click',()=>{

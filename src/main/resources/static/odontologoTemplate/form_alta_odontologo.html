@@ -5,36 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App</title>
-    <link rel="icon" type="image/x-icon" href="./assets/DH_Logo_Black.png">
-    <meta name="description" content="Digital House CTD | Proyecto integrador | Backend 1"/>
+    <title>Clínica Turnos</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo1.jpg">
+    <meta name="description" content="Digital House CTD | Proyecto integrador | Backend" />
 
-
-    <!-- ---------------- estilos compartidos de login y signup ---------------- -->
+    <!-- ----------------------------- estilos CSS ----------------------------- -->
+    <link rel="stylesheet" href="../css/tasksStyles.css">
     <link rel="stylesheet" href="../css/loginSignupStyles.css">
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- ---------------------- logica aplicada en register -------------------- -->
-    <script src="../js/odontologo/alta_odontologo.js"></script>
-    <!-- ----------------------  <script src="./scripts/signup.js"></script>------- -->
-    <script src="../js/loaders.js"></script>
+    <!-- ------------------- libreria de iconos Fontawesome -------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
+
+<!-- cabecera con barra de navegación -->
 <header class="container">
-    <nav>
-        <h1>Clínica Turnos | <span>Sonrisa Feliz</span></h1>
-        <img src="../assets/logo1.jpg" alt="logo DH" class="logo">
-    </nav>
+
+    <div>
+        <nav class="navbar">
+            <a  href="../index.html"><h1>Clínica Turnos</h1></a>
+            <ul>
+                <li> <a href="../odontologoTemplate/odontologo_lista.html">Odontólogos</a>  </li>
+
+                <li>   <a href="../pacienteTemplate/paciente_lista.html">Pacientes </a></li>
+
+                <li>  <a href="../turnoTemplate/turno_lista.html">Turnos </a> </li>
+            </ul>
+
+            <div class="user-info">
+                <p>username</p>
+                <div class="user-image"></div>
+                <button id="closeApp"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button>
+            </div>
+        </nav>
+    </div>
+
+
 </header>
 
 <div class="container">
-    <a class="nav-link" href="odontologo_lista.html"><strong>Listado de Odontologos </strong> </a>
+    <a class="nav-link" href="odontologo_lista.html"><strong>Listado de Odontólogos </strong> </a>
     <form  id="formularioAlta">
         <div class="form-header">
             <h2>Sonrisa Feliz</h2>
-            <p class="rounded">Registrar Odontologo</p>
+            <p class="rounded">Registrar Odontólogo</p>
         </div>
 
         <label>Nombre</label>
@@ -46,12 +64,23 @@
         <label>Matricula</label>
         <input id="numeroMatricula" type="text">
 
-        <button type="submit" id="crearOdontologo">Registrar Odontologo </button>
+        <button type="submit" id="crearOdontologo">Registrar Odontólogo </button>
     </form>
     <div id="response" style="diplay:none"></div>
 
 </div>
+<footer class="footer">
+    <div>
+        <h4 class="titulo-footer">Muelita-|-Sonrisa Feliz</h4>
 
+    </div>
+</footer>
 </body>
-
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script type="text/javascript"  src="../js/odontologo/alta_odontologo.js"></script>
+<script type="text/javascript"  src="../js/odontologo/get_odontologos.js"></script>
+<script type="text/javascript"  src="../js/odontologo/actualizar_odontologo.js"></script>
+<script type="text/javascript"  src="../js/odontologo/borrar_odontologo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </html>
