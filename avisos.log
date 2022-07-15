@@ -317,3 +317,5 @@ delete from domicilios where id=? [23503-214]]; nested exception is org.hibernat
 [2022-07-13 21:25:01] [ INFO ] [OdontologoService:29] Odontólogo creado con exito.
 [2022-07-13 21:25:14] [ INFO ] [PacienteService:32] Nuevo paciente creado con exito.
 [2022-07-13 21:25:37] [ INFO ] [TurnoService:29] Nuevo turno creado con exito.
+[2022-07-15 08:50:19] [ ERROR] [GlobalExceptionHandler:15] Usuario con id 1 no existe.
+[2022-07-15 08:50:55] [ INFO ] [UsuarioService:31] Usuario con username string creado con exito.
