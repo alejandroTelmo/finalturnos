@@ -1,6 +1,5 @@
 1-Entidades mapeadas a la BD y entidades para transferencia entre las distintas capas de la aplicación (dtos).
 2-Testeo unitario de las capas entidades y servicio
-3-Controller NO testeado (no supe como hacerlo)
 4-Las vistas estan todas incluidas y funcionales.
 5-El funcionamiento de la aplicación se puede testear desde postman y desde las vistas.
 6-El index.html es el punto de entrada de las vistas, la unica vista que hay que entrar desde la carpeta especifica,es 
